@@ -1,217 +1,211 @@
-<style>
- body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-/* ... (previous styles) ... */
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-}
-
-.header-content h1 {
-    font-size: 1.5rem;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-.auth-buttons{
-    position: absolute;
-    left: 1rem;
-    top: 6rem;
-}
-.auth-buttons a:hover{
-    color: green;
-    background-color: white;
-    padding: 3px;
-}
-nav a, .auth-buttons a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    margin-right: 1rem;
-}
-
-/* ... (remaining styles) ... */
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    padding: 6px;
-}
-nav a:hover{
-    background-color: white;
-    color: red;
-    
-}
-#search{
-    padding: 5px 30px;
-    right: 1rem;
-    top: 7rem;
-    position: absolute;
-    margin: -21px 25px;
-}
-/* ... (previous styles) ... */
-/* ... (previous styles) ... */
-
-.home {
-    padding: 3rem 0;
-    text-align: center;
-    background-color: #f5f5f5;
-}
-
-.home-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.home h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.home p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* ... (remaining styles) ... */
-
-
-.logo img {
- 
-    max-width: 100px;
-    position: absolute;
-    top: 23px;
-    height: 58px;
-    left: 2rem;
-}
-
-/* ... (previous styles) ... */
-
-.slider {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.slider-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.slider-images {
-    display: flex;
-    height: 300px; /* Set a fixed height for the container */
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-    height: 100%; /* Each image takes up the full height of the container */
-    width: auto;
-    object-fit: contain;
-}
-
-.slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.prev {
-    left: 26rem;
-}
-
-.next {
-    right: 31rem;
-}
-
-/* ... (remaining styles) ... */
-#marq{
-    margin: -20px;
-    padding: 3px;
-    color: black;
-    background-color: #d2691e52;
-    border: 1px red;
-}
-
-/* ... (remaining styles) ... */
-
-
-
-.products {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 2rem;
-}
-
-.product {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-}
-
-.add-to-cart {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-}
-
-    </style>
+   /* CSs Reset */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        /* CSS Variables */
+        :root{
+            --navbar-height: 59px;
+        }
+        
+        /* Navigation Bar */
+        #navbar{
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+        
+        /* Navigation Bar: Logo and Image */
+        #logo{
+            margin: 10px 34px;
+        }
+        
+        #logo img{
+            height: 69px;
+            margin: 3px 6px;
+        }
+        /* Navigation Bar: List Styling */
+        
+        #navbar ul{
+            font-family: 'Lalezar', cursive;
+            display: flex;
+        }
+        #navbar::before{
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        #navbar ul li{
+            list-style: none;
+            font-size: 1.3rem;
+        }
+        #navbar ul li a{
+           color: white;
+           display: block;
+           padding: 3px 22px;
+           border-radius: 20px;
+           text-decoration: none;
+        }
+        #navbar ul li a:hover{
+            color: black;
+            background-color: white;
+        }
+        /* Home section */
+        #home{
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 540px;
+            justify-content: center;
+            align-items: center;
+        }
+        #home::before{
+            content: "";
+            background: url('apples-g2cd38e0c2_1920.jpg'); no-repeat center center/cover;
+            position: absolute;
+            height: 85%;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+        #home h1{
+            color: white;
+            text-align: center;
+            font-size: 2.8rem;
+            font-family: 'Volkhov', serif;
+        }
+        #home p{
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Volkhov', serif;
+        }
+        /* Services Section */
+        #services{
+            margin: 34px;
+            display: flex;
+        }
+        
+        #services .box{
+            border: 2px solid brown;
+            padding: 34px;
+            margin: 3px 5px;
+            border-radius: 26px;
+            background: #e3e1e1;
+        }
+        
+        #services .box img{
+            height: 90px;
+            margin: auto;
+            display: block;
+        }
+        #services .box p{
+            font-family: 'Volkhov', serif;
+        }
+        
+        
+        /* Clients Section */
+        #client-section{
+            height: 260px;
+            position: relative;
+        }
+        #client-section::before{
+            content: "";
+            position: absolute;
+            background: url('paprika-g4a45c560b_1920.jpg');
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        #clients{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #client-item{
+            padding: 34px;
+        }
+        #clients img{
+            height: 124px;
+        }
+        
+        /* Contact Section */
+        #contact{
+            position: relative;
+        }
+        #contact::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background: url('apples-g98abd044d_1920.jpg') no-repeat center center/cover;
+        }
+        #contact-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+        #contact-box input,
+        #contact-box textarea{
+            width: 100%;
+            padding: 0.3rem;
+            border-radius: 5px;
+        }
+        #contact-box form{
+            width: 40%;
+        }
+        #contact-box label{
+            font-size: 1.2rem;
+            font-family: 'Lalezar', cursive;
+        }
+        footer{
+            background: black;
+            color: white;
+            padding: 9px 20px;
+        }
+        /* Utility Classes */
+        .h-primary{
+            font-family: 'Volkhov', serif;
+            font-size: 2.8rem;
+            padding: 12px;
+            margin: auto;
+            display: block;
+        }
+        .h-secondary{
+            font-family: 'Volkhov', serif;
+            font-size: 2rem;
+            padding: 12px;
+            margin: auto;
+            display: block;
+        }
+        .btn{
+            padding: 3px 28px;
+            border: 2px solid white;
+            background-color: brown;
+            color: white;
+            margin: 17px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Volkhov', serif;
+        }
+        .center{
+            text-align: center;
+        }
